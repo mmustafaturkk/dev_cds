@@ -6,6 +6,7 @@
 define view ZMTURK_3091_CDS_001
   as select from    mara
     left outer join makt on makt.matnr = mara.matnr
+                        and makt.spras = $session.system_language
 {
   mara.matnr,
   makt.maktx
